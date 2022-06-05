@@ -1,0 +1,55 @@
+.navbar {
+  @include flex-container(row, center, space-between, no-wrap);
+  padding: 20px 0;
+
+  &__logo {
+    z-index: 100;
+  }
+  &__ham {
+    cursor: pointer;
+    z-index: 100;
+    display: none;
+    user-select: none;
+    @media screen and (max-width: 720px) {
+      display: block;
+    }
+    ion-icon {
+      font-size: 1.6rem;
+    }
+  }
+  &__lists {
+    @media screen and (max-width: 720px) {
+      display: none;
+    }
+    @include flex-container(row, center, center, no-wrap);
+    gap: 20px;
+
+    // Mobile
+    &--mobile {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      background-color: palegoldenrod;
+      min-height: 100vh;
+      @include flex-container(column, stretch, center, no-wrap);
+      gap: 20px;
+      overflow: hidden;
+      width: 100vw;
+      transform: translateX(-100vw);
+      &.open {
+        transform: translateX(0vw);
+        transition: transform 0.5s;
+      }
+      &.close {
+        transform: translateX(-100vw);
+        transition: transform 0.5s;
+      }
+
+      ul {
+        @include flex-container(column, stretch, center, no-wrap);
+        gap: 20px;
+        font-size: 1.35rem;
+      }
+    }
+  }
+}

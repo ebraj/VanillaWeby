@@ -1,0 +1,18 @@
+// Helpers
+@import "./scss-config/helpers/colors";
+@import "./scss-config/helpers/responsive-typo";
+@import "./scss-config/helpers/mixins";
+
+// Base
+@import "./scss-config/base/resets";
+
+// Components
+@import "./scss-config/components/responsive-container";
+@import "./scss-config/components/extras";
+@import "./scss-config/components/buttons";
+@import "./scss-config/components/grids";
+@import "./scss-config/components/navbar";
+@import "./scss-config/components/header";
+
+// Pages
+@import "./scss-config/pages/home";

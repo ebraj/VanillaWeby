@@ -1,0 +1,18 @@
+// All about the mixins
+@mixin flex-container($direction, $align, $justify, $wrap) {
+  display: flex;
+  flex-wrap: $wrap;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+@mixin button-component($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+}
+@mixin container-width($cont-width) {
+  width: 100%;
+  max-width: $cont-width;
+  margin: 0 auto;
+  padding: 0px 20px;
+}

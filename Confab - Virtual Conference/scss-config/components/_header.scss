@@ -1,0 +1,85 @@
+.header {
+  padding: 80px 0;
+  &__top {
+    @include flex-container(row, flex-end, space-between, no-wrap);
+    gap: 20px;
+    @media screen and (max-width: 800px) {
+      @include flex-container(column, flex-start, center, no-wrap);
+    }
+  }
+
+  &__main {
+    position: relative;
+    margin-top: 40px;
+    padding: 40px;
+    min-height: 500px;
+    border-radius: 20px;
+    background: linear-gradient(
+        97deg,
+        rgba(0, 0, 0, 0.6) 64%,
+        rgba(0, 0, 0, 0.6) 100%
+      ),
+      url("../assets/images/header/Background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: grid;
+    grid-template-columns: 400px 1fr;
+
+    @media screen and (max-width: 850px) {
+      grid-template-columns: 1fr;
+    }
+    @media screen and (max-width: 450px) {
+      padding: 20px;
+    }
+
+    &--circle {
+      height: 120px;
+      width: 120px;
+      background-color: $cratola;
+      color: $white;
+      border-radius: 100%;
+      @include flex-container(row, center, center, no-wrap);
+      position: absolute;
+      top: -12%;
+      left: 50%;
+      transition: translate(-50%, -50%);
+
+      @media screen and (max-width: 985px) {
+        display: none;
+      }
+    }
+    &--left {
+      background-color: $white;
+      border-radius: 20px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+
+      div:first-child {
+        flex-grow: 1;
+        > h4 {
+          color: $cratola;
+        }
+      }
+    }
+    &--right {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      gap: 10px;
+      button {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      ion-icon {
+        font-size: 1.2rem;
+      }
+
+      @media screen and (max-width: 350px) {
+        flex-direction: column;
+      }
+    }
+  }
+}
