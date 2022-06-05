@@ -1,0 +1,38 @@
+.companies {
+  &-section {
+    padding: 70px 0;
+    background-color: $gray;
+  }
+
+  padding-bottom: 3rem;
+
+  &__logo {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+    text-align: center;
+
+    @media screen and (max-width: 850px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3.2rem;
+    }
+    @media screen and (max-width: 500px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3.5rem;
+    }
+
+    img {
+      height: 1.5rem;
+      width: auto;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    font-weight: 500;
+
+    span {
+      font-weight: 900;
+    }
+  }
+}

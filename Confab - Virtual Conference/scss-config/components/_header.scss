@@ -24,10 +24,12 @@
     background-repeat: no-repeat;
 
     display: grid;
+    gap: 20px;
     grid-template-columns: 400px 1fr;
 
     @media screen and (max-width: 850px) {
       grid-template-columns: 1fr;
+      min-height: 400px;
     }
     @media screen and (max-width: 450px) {
       padding: 20px;
