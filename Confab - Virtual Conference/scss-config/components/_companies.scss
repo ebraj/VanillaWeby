@@ -20,6 +20,10 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 3.5rem;
     }
+    @media screen and (max-width: 350px) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 4.25rem;
+    }
 
     img {
       height: 1.5rem;
